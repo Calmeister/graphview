@@ -1,4 +1,4 @@
-import 'package:example/LayerGraphView.dart';
+import 'LayerGraphView.dart';
 import 'package:flutter/material.dart';
 
 import 'GraphViewClusterPage.dart';
