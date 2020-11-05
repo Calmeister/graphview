@@ -26,10 +26,10 @@ class ArrowEdgeRenderer extends EdgeRenderer {
       var x2 = destinationOffset.dx;
       var y2 = destinationOffset.dy;
 
-      var startX = x1 + source.width / 2;
-      var startY = y1 + source.height / 2;
-      var stopX = x2 + destination.width / 2;
-      var stopY = y2 + destination.height / 2;
+      // var startX = x1 + source.width / 2;
+      // var startY = y1 + source.height / 2;
+      // var stopX = x2 + destination.width / 2;
+      // var stopY = y2 + destination.height / 2;
 
       var clippedLine = clipLine(startX, startY, stopX, stopY, destination);
 
