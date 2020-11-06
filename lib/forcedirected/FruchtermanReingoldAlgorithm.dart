@@ -19,7 +19,7 @@ class FruchtermanReingoldAlgorithm implements Layout {
   final BuildContext context;
 
   FruchtermanReingoldAlgorithm({this.iterations = DEFAULT_ITERATIONS, this.renderer, this.context}) {
-    renderer = renderer ?? EmbeddedArrowEdgeRenderer(context);
+    renderer = renderer ?? EmbeddedArrowEdgeRenderer(context) ?? ArrowEdgeRenderer();
   }
 
   void init(List<Node> nodes) {
