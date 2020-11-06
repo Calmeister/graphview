@@ -165,11 +165,12 @@ class Node {
 class Edge {
   Node source;
   Node destination;
+  Widget embeddedWidget;
 
   Key key;
   Paint paint;
 
-  Edge(this.source, this.destination, {this.key, this.paint});
+  Edge(this.source, this.destination, {this.key, this.paint, this.embeddedWidget});
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is Edge && hashCode == other.hashCode;
