@@ -32,6 +32,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  touchable:
+    dependency: "direct main"
+    description:
+      name: touchable
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.2.0"
   typed_data:
     dependency: transitive
     description:

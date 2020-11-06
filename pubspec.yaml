@@ -10,5 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  touchable:
 
 flutter:

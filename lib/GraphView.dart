@@ -6,10 +6,12 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:touchable/touchable.dart';
 
 part 'Graph.dart';
 part 'Layout.dart';
 part 'edgerenderer/ArrowEdgeRenderer.dart';
+part 'edgerenderer/EmbeddedArrowEdgeRenderer.dart';
 part 'edgerenderer/EdgeRenderer.dart';
 part 'edgerenderer/TreeEdgeRenderer.dart';
 part 'forcedirected/FruchtermanReingoldAlgorithm.dart';
