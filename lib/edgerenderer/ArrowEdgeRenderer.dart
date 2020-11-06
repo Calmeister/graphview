@@ -1,7 +1,7 @@
 part of graphview;
 
 const double ARROW_DEGREES = 0.5;
-const double ARROW_LENGTH = 100;
+const double ARROW_LENGTH = 20;
 
 class ArrowEdgeRenderer extends EdgeRenderer {
   var trianglePath = Path();
