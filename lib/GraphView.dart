@@ -27,7 +27,8 @@ class GraphView extends MultiChildRenderObjectWidget {
   final Layout algorithm;
   final Paint paint;
 
-  GraphView({Key key, @required this.graph, @required this.algorithm, this.paint})
+  GraphView(
+      {Key key, @required this.graph, @required this.algorithm, this.paint})
       : assert(graph != null),
         assert(algorithm != null),
         super(key: key, children: _extractChildren(graph));
@@ -41,6 +42,12 @@ class GraphView extends MultiChildRenderObjectWidget {
       result.add(element.data);
     });
     return result;
+
+    if (graph.edges.isNotEmpty) {
+      graph.edges.forEach((element) {
+        result.add(element.embeddedWidget);
+      });
+    }
   }
 
   @override
@@ -49,7 +56,8 @@ class GraphView extends MultiChildRenderObjectWidget {
   }
 
   @override
-  void updateRenderObject(BuildContext context, RenderCustomLayoutBox renderObject) {
+  void updateRenderObject(
+      BuildContext context, RenderCustomLayoutBox renderObject) {
     renderObject
       ..graph = graph
       ..algorithm = algorithm
@@ -58,7 +66,9 @@ class GraphView extends MultiChildRenderObjectWidget {
 }
 
 class RenderCustomLayoutBox extends RenderBox
-    with ContainerRenderObjectMixin<RenderBox, NodeBoxData>, RenderBoxContainerDefaultsMixin<RenderBox, NodeBoxData> {
+    with
+        ContainerRenderObjectMixin<RenderBox, NodeBoxData>,
+        RenderBoxContainerDefaultsMixin<RenderBox, NodeBoxData> {
   Graph _graph;
   Layout _algorithm;
   Paint _paint;
@@ -121,7 +131,8 @@ class RenderCustomLayoutBox extends RenderBox
     while (child != null) {
       final node = child.parentData as NodeBoxData;
 
-      child.layout(BoxConstraints.loose(constraints.biggest), parentUsesSize: true);
+      child.layout(BoxConstraints.loose(constraints.biggest),
+          parentUsesSize: true);
       graph.getNodeAtPosition(position).size = child.size;
 
       child = node.nextSibling;
